@@ -24,13 +24,18 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Copy sprints.html to sprints/index.html
+        run: |
+          mkdir -p dist/sprints
+          cp dist/sprints.html dist/sprints/index.html
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-  add-subtree:
+  add-subtrees:
     runs-on: ubuntu-latest
     needs: build-and-deploy  # Ensures build runs first
 
