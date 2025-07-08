@@ -62,7 +62,7 @@ jobs:
       - name: Add subtree 17
         run: |
           git subtree add --prefix sprints/17 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-17.git gh-pages --squash || echo "Subtree may already exist"
-s
+
       - name: Add subtree sponsoring
         run: |
           git subtree add --prefix sprints/sponsoring https://github.com/opengeospatial/dev-sprint-sponsoring.git gh-pages --squash || echo "Subtree may already exist"
