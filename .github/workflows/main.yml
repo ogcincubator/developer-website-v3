@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p dist/sprints
           cp dist/sprints.html dist/sprints/index.html
-          
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -51,9 +51,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Add subtree
+      - name: Add subtree 15
         run: |
           git subtree add --prefix sprints/15 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-15.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 16
+        run: |
+          git subtree add --prefix sprints/16 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-16.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 17
+        run: |
+          git subtree add --prefix sprints/16 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-17.git gh-pages --squash || echo "Subtree may already exist"
 
       - name: Push changes
         run: |
