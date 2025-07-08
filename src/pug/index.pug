@@ -1,0 +1,572 @@
+doctype html
+html(lang='en')
+
+    head
+        // Google tag
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5KGJV26');
+        // End Google Tag Manager
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title OGC Developer Website
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/3d_emblem_lockup.ico')
+
+        // Font Awesome icons (free version)
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js', crossorigin='anonymous')
+
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
+
+        // prims.js
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-bash.min.js" integrity="sha512-35RBtvuCKWANuRid6RXP2gYm4D5RMieVL/xbp6KiMXlIqgNrI7XRUh9HurE8lKHW4aRpC0TZU3ZfqG8qmQ35zA==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-funky.min.css" integrity="sha512-KaCkQvJ0dQIhdJ0Am5LM3sgXA+Y0LWpbxkfKACZnlOqDvk54lZaWYk/sQiJGNRuSyFpe24jpjwJ4q+u3Rbez5g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    body#page-top
+
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand(href='./')
+                    img(src='assets/img/ogc-logo-white.svg', alt='...')
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | Menu
+                    i.fas.fa-bars.ms-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
+                        //- li.nav-item
+                        //-     a.nav-link(href='#adopters') Adopters
+                        li.nav-item
+                            a.nav-link(href='#testimonials') Testimonials
+                        li.nav-item
+                            a.nav-link(href='#get_started') Get Started
+                        li.nav-item
+                            a.nav-link(href='#learn') Learn
+                        li.nav-item
+                            a.nav-link(href='#community') Community
+                a(href='https://github.com/opengeospatial/developer-website.git')
+                    img(style='position: absolute; top: 0; right: 0; border: 0;' src='./assets/img/forkme_right_darkblue_121621.png' alt='Fork me on GitHub')
+
+
+
+        // Masthead
+        header.masthead
+
+            .container.px-5
+                .row.gx-5.align-items-center
+                    .col-lg-9
+                        .masthead-heading Build interoperable, geospatial, solutions with OGC Standards
+
+                        .masthead-subheading 
+                            .li
+                                .ul
+                                    svg(width='12' height='10' viewbox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M10.8519 0.52594L3.89189 7.10404L1.14811 4.51081L0 5.59592L3.89189 9.27426L12 1.61105L10.8519 0.52594Z' fill='white' fill-opacity='0.87')
+                                    | Providing a consistent way for different systems to interoperate and share geospatial data.
+                                .ul
+                                    svg(width='12' height='10' viewbox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M10.8519 0.52594L3.89189 7.10404L1.14811 4.51081L0 5.59592L3.89189 9.27426L12 1.61105L10.8519 0.52594Z' fill='white' fill-opacity='0.87')
+                                    | Enabling applications to more easily access and use geospatial data from a wide variety of sources.
+                                .ul
+                                    svg(width='12' height='10' viewbox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                        path(d='M10.8519 0.52594L3.89189 7.10404L1.14811 4.51081L0 5.59592L3.89189 9.27426L12 1.61105L10.8519 0.52594Z' fill='white' fill-opacity='0.87')
+                                    | Made by developers, for developers.
+                        
+                        a.btn.btn-primary.btn-xl.text-uppercase(href='#learn') Learn
+                        a.btn.btn-secondary.btn-xl.text-uppercase(href='#get_started') Get Started
+
+                    .col-lg-3
+                        //- img(title='This image was generated with the assistance of AI.' src='assets/img/sockets.svg', alt='...', style='width: 90%;')
+                        div.box#code-box
+                            pre
+                                code.language-bash
+                                    | curl -X 'GET' \
+                                    | 'https://demo.pygeoapi.io/master/collections/lakes/items?limit=10&skipGeometry=false&offset=0' \
+                                    | -H 'accept: application/geo+json'
+                        a.btn.btn-light(onclick='copyToClipboard(this)') Copy
+
+        // Testimonials
+        section#testimonials.page-section.bg-dark
+            .container
+                .text-center
+                    //- h2.section-heading.text-uppercase Testimonials
+
+                    #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+                    
+                        .carousel-indicators
+                            button.active(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='1' aria-label='Slide 2')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='2' aria-label='Slide 3')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='3' aria-label='Slide 4')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='4' aria-label='Slide 5')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='5' aria-label='Slide 6')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='6' aria-label='Slide 7')
+                            button(type='button' data-bs-target='#carouselExampleControls' data-bs-slide-to='7' aria-label='Slide 8')
+
+                        .carousel-inner
+                            .carousel-item.active
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text
+                                        p "So these OGC codesprints put the potential users together, so that we all try and make these APIs palatable for all. We won’t make everybody happy, but we can try to make nobody hate the APIs." 
+                                    .testimonials-title
+                                        p - Ivan Sanchez Ortega, Freelance GIS+JS developer and OSGeo charter member
+                                img.rounded-circle(src='assets/img/ivan.png' alt='Ivan' height='200')
+                            .carousel-item
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text                             
+                                        p "Exciting times for international weather/climate/water data exchange, using open Standards and open source reference implementations."                        
+                                    .testimonials-title 
+                                        p - Tom Kralidis, OSGeo Board Member and Key Contributor of FOSS4G projects
+                                img.rounded-circle(src='assets/img/tom.jpeg' alt='Tom')
+                            .carousel-item
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text                             
+                                        p "Using industry tools, you can take these specifications (OGC APIs) as is and easily generate service and client implementations. APIs are now programmatically ingestible to create implementation and documentation!  Huge step forward!"                        
+                                    .testimonials-title 
+                                        p - Steve McDaniel, Software Scientist at Hexagon
+                                img.rounded-circle(src='assets/img/Steve_McDaniel_Head_Shot.png' alt='Steve')
+                            .carousel-item
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text                             
+                                        p "The next generation of OGC API Standards make it easy for data publishers to create modern, developer friendly APIs to access geospatial data. Being involved in the development of this next generation of API Standards has enabled Ordnance Survey to significantly modernise how our customers access authoritative geospatial data."
+                                    .testimonials-title 
+                                        p - Michael Gordon, Strategic Product Manager at Ordnance Survey
+                                img.rounded-circle(src='assets/img/michael-os.png' alt='Michael')
+                            .carousel-item
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text                             
+                                        p "The new OGC-APIs allow you to access the features of the SDI datasets of Spain (hydrography, land use and cover, transport networks…) in a simple and friendly way . Open source knowledge is becoming more accessible and competitive and this new Standard is great proof of that."
+                                    .testimonials-title 
+                                        p - Aure Aragón Velasco, Tecnical Land Surveyor engineer of the Spanish SDI (IDEE IGN/CNIG)
+                                img.rounded-circle(src='assets/img/aure.jpg' alt='Aure')
+                            .carousel-item
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text                             
+                                        p "OGC Standards underpin the transfer of geospatial datasets, and the OGC APIs reflect the use of cloud-hosted computing alongside being easier to understand due to supporting code repositories."
+                                    .testimonials-title 
+                                        p - Samantha Lavender, EO Scientist and Director at Pixalytics
+                                img.rounded-circle(src='assets/img/slavender.jpeg' alt='Samantha')
+                            .carousel-item
+                                .carousel-caption.d-none.d-md-block
+                                    .testimonials-text                             
+                                        p "Participating in the development and implementation of the new OGC APIs is very intense and exciting. It's amazing to see everyone working together towards the same goal, Standards and interoperability, no matter who you are or where you come from."
+                                    .testimonials-title 
+                                        p - Núria Julià Selvas, Senior GIS Developer at CREAF - MiraMon
+                                img.rounded-circle(src='assets/img/nuria.jpeg' alt='Nuria')
+                            //- .carousel-item
+                            //-     .carousel-caption.d-none.d-md-block
+                            //-         .testimonials-text                             
+                            //-             p "In terms of data handling, the OGC API is easier because we can use it as if it were a REST API. It increases interoperability between GIS and non-GIS software. It allows for better data load management."
+                            //-         .testimonials-title 
+                            //-             p - João Filipe Gaspar, GIS Specialist at the Navigator Company
+                            //-     img.rounded-circle(src='assets/img/joao.jpeg' alt='Joao')
+
+                        button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
+                            span.carousel-control-prev-icon(aria-hidden='true')
+                            span.visually-hidden Previous
+                        button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
+                            span.carousel-control-next-icon(aria-hidden='true')
+                            span.visually-hidden Next
+
+        // Get Started
+        section#get_started.page-section.bg-light
+                .container
+                    .text-center
+                        h2.section-heading.text-uppercase Get Started
+                        p.text-muted Each Standard addresses a specific type of geospatial data or associated resources. 
+                            i Interfaces
+                            | define how services can access the data, while 
+                            i encodings 
+                            | define the structure and organisation of data formats and messaging protocols.
+                            | Browse the list bellow to find the one that matches your needs.
+
+                    h3.text-uppercase Interfaces
+                    p.text-muted Interface Standards provide rules that determine the operations in a server client architecture. For instance web mapping applications, or 
+                        i Web GIS, 
+                        | fit into this pattern where an interface is used to request maps to a map service provider.
+
+                    //- .div(id="shuffleApis")
+                    //-     .row
+                    //-         .col-lg-4
+                    //-         .col-lg-4
+                    //-         .col-lg-4
+                    //-         .col-lg-4
+
+                    .row
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/tile-thumb.jpg', alt='...')
+                                    h4 OGC API - Tiles
+                                    p.text-muted Interface for tiles of geospatial information (e.g.: vector data, maps or coverages). 
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://tiles.developer.ogc.org/' title='Website' target="_blank")
+                                        i.fa.fa-link
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-tiles' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/feat-full.jpg', alt='...')
+                                    h4 OGC API - Features
+                                    p.text-muted Interface for feature data.
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://features.developer.ogc.org/' title='Website' target="_blank")
+                                        i.fa.fa-link
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-features' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/sensorthings.jpg', alt='...')
+                                    h4 OGC SensorThings API
+                                    p.text-muted Interface for spatially enabled IoT devices, data and applications.
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/sensorthings' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/map-thumb.jpg', alt='...')
+                                    h4 OGC API - Maps
+                                    p.text-muted Interface for maps, customized using parameters (e.g.: dimensions, background, coordinate reference system).
+                                    //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                    //-     i.fa.fa-link
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-maps' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/edr-thumb.jpg', alt='...')
+                                    h4 OGC API - Environmental Data Retrieval (EDR)
+                                    p.text-muted Interface for sampling data about the natural or built environment, using a spatio-temporal query pattern.
+                                    //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                    //-     i.fa.fa-link
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-environmental-data-retrieval' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github 
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/movingfeatures-thumb.jpg', alt='...')
+                                    h4 OGC API - Moving Features
+                                    p.text-muted Interface to access representations of Moving Features.
+                                    //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                    //-     i.fa.fa-link
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-movingfeatures' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                .ribbon-holder
+                                    .ribbon.ribbon-holder Published
+                                    img.mx-auto.rounded-circle(src='assets/img/process-thumb.jpg', alt='...')
+                                    h4 OGC API - Processes
+                                    p.text-muted Interface for wrapping computational tasks into executable processes. Processes include well-defined algorithms that ingest vector and/or coverage data to produce new datasets.
+                                    //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                    //-     i.fa.fa-link
+                                    a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-processes' title='GitHub repo' target="_blank")
+                                        i.fa-brands.fa-github 
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/records-thumb.jpg', alt='...')
+                                h4 OGC API - Records
+                                p.text-muted Interface for discovering and querying metadata about geospatial resources (e.g.: catalogue).
+                                a.btn.btn-dark.btn-social.mx-2(href='https://records.developer.ogc.org/' title='Website' target="_blank")
+                                    i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-records' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github  
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/stylesimage-thumb.jpg', alt='...')
+                                h4 OGC API - Styles
+                                p.text-muted Interface for styles for rendering geospatial data.
+                                //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                //-     i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-styles' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/dggs.png', alt='...')
+                                h4 OGC API - Discrete Global Grid Systems (DGGS)
+                                p.text-muted Interface for data organised according to a hierarchical tessellation of zones to partition and address the globe.
+                                a.btn.btn-dark.btn-social.mx-2(href='https://dggs-info.web.app/#/' title='Website' target="_blank")
+                                    i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-discrete-global-grid-systems' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/geovolumes-thumb.jpg', alt='...')
+                                h4 OGC API - 3D GeoVolumes
+                                p.text-muted Interface for 3D geospatial data.
+                                //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                //-     i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-3d-geovolumes' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github                           
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/cube-coverages-thumb.jpg', alt='...')
+                                h4 OGC API - Coverages
+                                p.text-muted Interface for accessing homogeneous collections of values located in space/time (e.g.: coverages). A satellite image is an example of a gridded coverage.
+                                //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                //-     i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-coverages' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/routes-thumb.jpg', alt='...')
+                                h4 OGC API - Routes
+                                p.text-muted  Interface to request routes in a manner independent of the underlying routing data set, routing engine or algorithm.
+                                //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                //-     i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-routes' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/joins-thumb.jpg', alt='...')
+                                h4 OGC API - Joins
+                                p.text-muted Interface to join data from input files with tabular data from other sources.
+                                //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                //-     i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogcapi-joins' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/xml.jpeg', alt='...')
+                                h4 OWS
+                                p.text-muted Looking for the previous generation of OGC Web Services (e.g.: WFS, WMTS, WMS)?
+                                a.btn.btn-dark.btn-social.mx-2(href='ows.html' title='Website' target="_blank")
+                                    i.fa.fa-link
+
+                    p.text-muted Still don't find what you are looking for?
+                        | Try the 
+                        a(href='https://api-config.developer.ogc.org/') OGC API configurator.
+                            <br>  
+
+                    h3.text-uppercase Encodings
+                    p.text-muted Data Encoding Standards provide the rules for structuring and organising geospatial data for use in a given context.
+                        | They apply to binary formats (e.g.: GeoTIFF), as well as human-readable formats (e.g.: JSON).
+                    .row
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/polyhedron-mathematics-geometry-rhombicosidodecahedron-archimedean-solid-mathematics-3f454e0ef2cb96cf4e83cca8e7c9c0df.png', alt='...')
+                                h4 JSON-FG
+                                p.text-muted If you are using GeoJSON, but your data is not in WGS84, be sure to check this encoding. OGC Features and Geometries JSON extends GeoJSON, in order to overcome some of its limitations. 
+                                //- a.btn.btn-dark.btn-social.mx-2(href='!#' title='Website' target="_blank")
+                                //-     i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/ogc-feat-geo-json' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/geoparquet-logo.png', alt='...')
+                                h4 GeoParquet
+                                p.text-muted Columnar geospatial format, based on Apache Parquet. It enables interoperability between cloud data warehouses.
+                                a.btn.btn-dark.btn-social.mx-2(href='https://geoparquet.org/' title='Website' target="_blank")
+                                    i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/geoparquet' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/COG_Alt_Logo.png', alt='...')
+                                h4 Cloud Optimized GeoTIFF (COG)
+                                p.text-muted If you work with imagery and grid coverage data on the web, you could check out this format; backwards compatible with GeoTIFF.
+                                a.btn.btn-dark.btn-social.mx-2(href='https://www.cogeo.org/' title='Website' target="_blank")
+                                    i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/CloudOptimizedGeoTIFF' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/geopkg.png', alt='...')
+                                h4 GeoPackage
+                                p.text-muted GeoPackage lets you store different types of geospatial information (e.g.: vector data, attributes, metadata, styles) in a single container.
+                                a.btn.btn-dark.btn-social.mx-2(href='https://www.geopackage.org/' title='Website' target="_blank")
+                                    i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/geopackage' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+                        .col-lg-4
+                            .team-member
+                                img.mx-auto.rounded-circle(src='assets/img/playground_temperature_coverage_with_values_.png', alt='...')
+                                h4 CoverageJSON
+                                p.text-muted CoverageJSON is simple, efficient, machine and human readable JSON for publishing spatio-temporal data to the Web. 
+                                a.btn.btn-dark.btn-social.mx-2(href='https://covjson.org/' title='Website' target="_blank")
+                                    i.fa.fa-link
+                                a.btn.btn-dark.btn-social.mx-2(href='https://github.com/opengeospatial/CoverageJSON' title='GitHub repo' target="_blank")
+                                    i.fa-brands.fa-github
+ 
+        // Learn
+        section#learn.page-section.bg-light
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Learn
+                    h3.section-subheading.text-muted If you want learn more about the conceptual part of OGC API, try these learning resources.
+
+                ul.timeline
+                    li
+                        .timeline-image
+                            a(href='https://ogcapi-workshop.ogc.org/' title='OGC API Workshop' target="_blank")
+                                img.rounded-circle.img-fluid(src='assets/img/ogcapi.png', alt='...')
+                        .timeline-panel
+                            .timeline-heading
+                                h4.subheading OGC API Workshop
+                            .timeline-body
+                                p.text-muted
+                                    | This workshop provides a combination of concepts, presentation and exercises of OGC APIs in support of discovery, access, visualization and processing in support of FAIR data principles.
+                    li.timeline-inverted
+                        .timeline-image
+                            a(href='https://academy.ogc.org/' title='E-learning' target="_blank")
+                                img.rounded-circle.img-fluid(src='assets/img/location_innovation_academy_logo.png', alt='...')
+                        .timeline-panel
+                            .timeline-heading
+                                h4.subheading Location Innovation Academy
+                            .timeline-body
+                                p.text-muted
+                                    | This learning platform offers different courses, mostly focused on Spatial Data Infrastructures.
+                    li
+                        .timeline-image
+                            a(href='https://opengeospatial.github.io/e-learning/index.html' title='E-learning' target="_blank")
+                                img.rounded-circle.img-fluid(src='assets/img/elearning.jpeg', alt='...')
+                        .timeline-panel
+                            .timeline-heading
+                                h4.subheading OGC e-learning
+                            .timeline-body
+                                p.text-muted
+                                    | Modular course that provides some background about OGC Standards.
+
+        // About
+        section#about.page-section
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase You may also want to check
+                //-     h3.section-subheading.text-muted Main reasons for using OGC API Features.
+                .row.text-center
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            i.fas.fa-circle.fa-stack-2x.text-primary
+                            i.fas.fa-file-signature.fa-stack-1x.fa-inverse
+                        h4.my-3 Definitions Server
+                        p.text-muted
+                            | The
+                            a(href='https://defs.opengis.net/vocprez/') OGC Definitions Server
+                            | is a web accessible source of information about things ("Concepts") the OGC defines or that communities ask the OGC to host on their behalf (e.g.: technical terms from application schemas).
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            i.fas.fa-circle.fa-stack-2x.text-primary
+                            i.fas.fa-cube.fa-stack-1x.fa-inverse
+                        h4.my-3 Location building blocks
+                        p.text-muted
+                            | Maybe you don't need a complete OGC API, or you need to mix multiple OGC APIs.
+                            | The OGC APIs are developed in 
+                            a(href='https://blocks.ogc.org/') discrete building blocks
+                            |, which you can mix & match to spatially enable your existing APIs.
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            i.fas.fa-circle.fa-stack-2x.text-primary
+                            i.fas.fa-check.fa-stack-1x.fa-inverse
+                        h4.my-3 Compliance and Certification
+                        p.text-muted
+                            | The 
+                            a(href='https://www.ogc.org/how-our-compliance-program-works/') OGC Compliance program 
+                            | provides the tools to test your implementation and make sure it is compliant to the Standard.
+                            | If you want to take your application to the next level, you can apply for a compliance certification.
+
+        // Community
+        section#community.page-section
+             .container
+                .text-center
+                    h2.section-heading.text-uppercase Community
+                    h3.section-subheading.text-muted Be part of the #OGCAPI comunity. Tell us what’s working well, what you want to see added or improved, and find out about new updates.
+                .row.text-center
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            a(href='https://developer.ogc.org/sprints/' title='Events')
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fa-solid.fa-users.fa-stack-1x.fa-inverse
+                        h4.my-3 Code Sprints
+                        p.text-muted
+                            | Collaborative and inclusive events to support the development of open geospatial Standards, and projects that implement those Standards.
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            a(href='https://dev.to/doublebyte' title='Dev.to')
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fa-brands.fa-dev.fa-stack-1x.fa-inverse
+                        h4.my-3 Dev.to
+                        p.text-muted
+                            | #OGCAPI related content in a constructive and inclusive social network for software developers.
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            a(href='https://discord.gg/3uyaZZuXr3' title='Discord')                        
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fab.fa-discord.fa-stack-1x.fa-inverse
+                        h4.my-3 Discord
+                        p.text-muted
+                            | Chat with other developers and take active part in the code sprints in the OGC Community channel.
+                    .col-md-4
+                        span.fa-stack.fa-4x
+                            a(href='blogs.html' title='Blogs' target="_blank")                        
+                                i.fas.fa-circle.fa-stack-2x.text-primary
+                                i.fa-solid.fa-blog.fa-stack-1x.fa-inverse
+                        h4.my-3 Blogs
+                        p.text-muted
+                            | Blogs from the community.
+
+        section#adopters.page-section
+            .container
+                .text-center
+                    h2.section-heading.text-uppercase Who is behind the OGC Standards?
+                p.text-muted 
+                    | OGC Standards are developed through a member-driven consensus process, which creates royalty free, publicly available, open geospatial standards.
+                    | The
+                    a(href="https://www.ogc.org/") Open Geospatial Consortium (OGC)
+                    | is the organisation which drives this process. It is supported by an active community of members, with involvement from a large range of organizations, as well as smaller ones. <a href="https://www.ogc.org/about/members/">Join OGC today!</a>
+
+
+
+        // Footer
+        footer.footer.py-4.bg-light
+            .container
+                .row.align-items-center
+                    .col-lg-4.text-lg-start
+                        | Copyright &copy; 2022. Open Geospatial Consortium all rights reserved
+                    .col-lg-4.my-3.my-lg-0
+                        a.btn.btn-dark.btn-social.mx-2(href='https://noc.social/@doublebyte')
+                            i.fa-brands.fa-mastodon
+                        a.btn.btn-dark.btn-social.mx-2(href='mailto:devrel@ogc.org')
+                            i.fa.fa-envelope
+                    .col-lg-4.text-lg-end
+                        a.link-dark.text-decoration-none.me-3(href='https://www.ogc.org/about/policies/privacy-policy/' target="_blank") Privacy Policy
+
+        // Portfolio Modals
+        include includes/portfolio-modal-1
+
+        // Bootstrap core JS
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js')
+
+        // Jquery
+        script(src='https://code.jquery.com/jquery-3.6.2.min.js')
+
+        // Core theme JS
+        script(src='js/scripts.js')
+
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        // * *                               SB Forms JS                               * *
+        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
+        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+        //script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
+
