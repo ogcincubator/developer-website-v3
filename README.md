@@ -16,7 +16,8 @@ Run locally (includes development server):
 
 `npm start`
 
-Commit all your changes to the `master` branch. The gh-pages will be wiped each time and generated dynamically from a [GitHub action]()
+Commit all your changes to the `master` branch. **The `gh-pages` branch will be wiped each time, and generated dynamically from [GitHub actions](https://github.com/ogcincubator/developer-website-v3/actions/)**. Apart from copying the static build, the action will copy the `api` folder and pull remote repos that live under `developer.ogc.org`. If you need to add anything else, just edit the [workflow file](https://github.com/ogcincubator/developer-website-v3/blob/master/.github/workflows/main.yml) directly.
+
 
 ## Intellectual Property Rights
 
