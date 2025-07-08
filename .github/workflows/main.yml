@@ -63,6 +63,38 @@ jobs:
         run: |
           git subtree add --prefix sprints/17 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-17.git gh-pages --squash || echo "Subtree may already exist"
 
+      - name: Add subtree 18
+        run: |
+          git subtree add --prefix sprints/18 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-18.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 17
+        run: |
+          git subtree add --prefix sprints/19 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-19.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 20
+        run: |
+          git subtree add --prefix sprints/20 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-20.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 21
+        run: |
+          git subtree add --prefix sprints/21 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-21.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 22
+        run: |
+          git subtree add --prefix sprints/22 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-22.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 23
+        run: |
+          git subtree add --prefix sprints/23 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-23.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 24
+        run: |
+          git subtree add --prefix sprints/24 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-24.git gh-pages --squash || echo "Subtree may already exist"
+
+      - name: Add subtree 25
+        run: |
+          git subtree add --prefix sprints/25 https://github.com/opengeospatial/dev-ogc-org-sprint-landing-25.git gh-pages --squash || echo "Subtree may already exist"
+
       - name: Add subtree sponsoring
         run: |
           git subtree add --prefix sprints/sponsoring https://github.com/opengeospatial/dev-sprint-sponsoring.git gh-pages --squash || echo "Subtree may already exist"
